@@ -11,6 +11,8 @@ import Progress from "../../components/progressbar/progressbar";
 import Step1 from "./step1/step1";
 import Step2 from "./step2/step2";
 import Step3 from "./step3/step3";
+import Step4 from "./step4/step4";
+
 import './styles.css';
 
 
@@ -19,6 +21,7 @@ const SurveyForm = () => {
     const [businessIndustry, SetbusinessIndustry] = useState('');
     const [jobTitle, SetjobTitle] = useState('');
     const [gender, Setgender] = useState('');
+    const [age, Setage] = useState('');
 
 
     const onChangeValue = (event) => {
@@ -32,6 +35,9 @@ const SurveyForm = () => {
         else if (event.target.name === 'gender') {
             Setgender(event.target.value);
         }
+        else if (event.target.name === 'age') {
+            Setage(event.target.value);
+        }
     }
 
     return (
@@ -40,10 +46,9 @@ const SurveyForm = () => {
             <Progress now={60} />
             {/* <Step1 value={businessIndustry} handlechange={onChangeValue} /> */}
             {/* <Step2 value={jobTitle} handlechange={onChangeValue} /> */}
-            <Step3 value={gender} handlechange={onChangeValue} />
+            {/* <Step3 value={gender} handlechange={onChangeValue} /> */}
+            <Step4 value={age} handlechange={onChangeValue} />
 
-            {/* <Step2 />
-            <Step3 /> */}
             <PageNavigator page={3} />
             <Footer />
         </form>

@@ -8,7 +8,7 @@ const SingleSelectOption = (props) => {
 
     let select = (selected === value) ? true : false;
 
-    const col = name === 'gender' ? 'col-10 col-md-5' : 'col-10 col-5 col-md-3';
+    const col = name === 'gender' ? 'col-10 col-md-5' : 'col-10 col-md-3';
 
     return (
         <div className={`${col}   d-flex justify-content-center align-items-center text-center border-0`}>
