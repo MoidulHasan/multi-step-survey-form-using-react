@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import SingleSelectOption from "../../../components/singleSelectOption/singleSelectOption";
-import { Form } from "react-bootstrap";
 
-const Step1 = () => {
-    const onChangeValue = (event) => {
-        console.log(event.target.value);
-        SetbusinessIndustry(event.target.value);
-    }
+const Step1 = (props) => {
+    // console.log(props);
+    const { handlechange, value } = props;
+    // const { state, statesetter } = props;
+    // const onChangeValue = (event) => {
+    //     console.log(event.target.value);
+    //     statesetter(event.target.value);
+    // }
 
-    const [businessIndustry, SetbusinessIndustry] = useState('Defence');
 
     const options = [
         'Advanced manufacturing',
@@ -32,14 +33,16 @@ const Step1 = () => {
     return (
         <div>
             <h1 className={`text-center`}>What industry is your business?</h1>
-            <div className="d-flex flex-wrap align-items-center justify-content-center px-5 mx-5" onChange={onChangeValue}>
-                {
-                    options.map((option) => (
-                        <SingleSelectOption name="business-industry" value={option} lavel={option} selected={businessIndustry} />
-                    ))
-                }
+            <div className={`container-fluid my-3`}>
+                <div className="d-flex flex-wrap align-items-center justify-content-center px-5 mx-md-5" onChange={handlechange}>
+                    {
+                        options.map((option) => (
+                            <SingleSelectOption name="business-industry" value={option} lavel={option} selected={value} />
+                        ))
+                    }
+                </div>
             </div>
-        </div>
+        </div >
 
     );
 };
