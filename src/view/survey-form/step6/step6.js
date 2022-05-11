@@ -15,7 +15,7 @@ const Step6 = (props) => {
         <div>
             <h1 className={`text-center`}>How would you like to learn about these topics?</h1>
             <div className={`container-fluid my-3`}>
-                <div className="p-2 d-flex flex-wrap align-items-center justify-content-center px-5 mx-md-5" onChange={handlechange}>
+                <div className="d-flex flex-wrap align-items-center justify-content-center px-5 mx-md-5" onChange={handlechange}>
                     {
                         options.map((option) => (
                             <SingleSelectOption name="learning-method" value={option} lavel={option} selected={value} />

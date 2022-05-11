@@ -27,7 +27,7 @@ const SingleSelectOption = (props) => {
     else if (value === 'Dashboard only') {
         imgsrc = DashboardOnly;
     }
-    console.log(imgsrc)
+    // console.log(imgsrc)
 
     if (imgsrc) {
         return (
@@ -39,11 +39,10 @@ const SingleSelectOption = (props) => {
                             <div className=" m-0 d-flex justify-content-center align-items-center fs-5">
                                 {lavel} {select && <BsFillCheckCircleFill className={`text-info fs-3 position-absolute top-0 end-0 m-1`} />}
                             </div>
-                            <input id={value} className={`radio-custom m-5`} type="radio" value={value} name={name} />
+                            <input key={value} className={`radio-custom m-5`} type="radio" value={value} name={name} />
                         </div>
                     </div>
                 </div>
-
             </label >
 
         );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SingleSelectOption from "../../../components/singleSelectOption/singleSelectOption";
 
 const Step3 = (props) => {

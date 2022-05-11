@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import SingleSelectOption from "../../../components/singleSelectOption/singleSelectOption";
 
 const Step2 = (props) => {
 
+    console.log(props)
     const { handlechange, value } = props;
 
     const options = [

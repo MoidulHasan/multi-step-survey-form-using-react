@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import SingleSelectOption from "../../../components/singleSelectOption/singleSelectOption";
 
 const Step1 = (props) => {
-    // console.log(props);
     const { handlechange, value } = props;
-    // const { state, statesetter } = props;
-    // const onChangeValue = (event) => {
-    //     console.log(event.target.value);
-    //     statesetter(event.target.value);
-    // }
-
 
     const options = [
         'Advanced manufacturing',
