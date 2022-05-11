@@ -13,6 +13,7 @@ import Step2 from "./step2/step2";
 import Step3 from "./step3/step3";
 import Step4 from "./step4/step4";
 import Step5 from "./step5/step5";
+import Step6 from "./step6/step6";
 
 import './styles.css';
 
@@ -24,6 +25,7 @@ const SurveyForm = () => {
     const [gender, Setgender] = useState('');
     const [age, Setage] = useState('');
     const [interest, Setinterest] = useState([]);
+    const [learningMethod, SetlearningMethod] = useState('');
     // console.log(interest);
 
     const onChangeValue = (event) => {
@@ -49,7 +51,9 @@ const SurveyForm = () => {
                 Setinterest([...interest]);
                 console.log(interest);
             }
-
+        }
+        else if (event.target.name === 'learning-method') {
+            SetlearningMethod(event.target.value);
         }
 
     }
@@ -62,7 +66,8 @@ const SurveyForm = () => {
             {/* <Step2 value={jobTitle} handlechange={onChangeValue} /> */}
             {/* <Step3 value={gender} handlechange={onChangeValue} /> */}
             {/* <Step4 value={age} handlechange={onChangeValue} /> */}
-            <Step5 value={interest} handlechange={onChangeValue} />
+            {/* <Step5 value={interest} handlechange={onChangeValue} /> */}
+            <Step6 value={learningMethod} handlechange={onChangeValue} />
 
             <PageNavigator page={3} />
             <Footer />
